@@ -10,7 +10,7 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  const API = "http://localhost:9999"
+  const API = "https://" + document.location.host;
   useEffect(() => {
     fetchTasks();
   }, []);

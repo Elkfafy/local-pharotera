@@ -10,11 +10,14 @@ const app = express();
 const port = 3000;
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: "*"
+}
+));
 app.use(express.json());
 
 // MongoDB Connection
-mongoose.connect('mongodb://db/task-manager')
+mongoose.connect('mongodb://db:27017/task-manager')
   .then(() => console.log('Connected to MongoDB'))
   .catch(err => console.error('MongoDB connection error:', err));
 
