@@ -1,0 +1,13 @@
+services:
+  db:
+    image: mongo
+  client:
+    build: ./client
+    ports:
+      - "80:80"
+      - "443:443"
+  server:
+    build: ./server
+    ports:
+      - "9999:3000"
+  
