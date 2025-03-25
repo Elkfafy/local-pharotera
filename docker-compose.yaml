@@ -8,6 +8,4 @@ services:
       - "443:443"
   server:
     build: ./server
-    ports:
-      - "9999:3000"
   
