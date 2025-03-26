@@ -9,6 +9,6 @@ run npm run build
 
 from nginx:1-alpine
 
-copy --from=build /app/dist /app/html
+copy --from=build /app/dist /html
 copy ./nginx/test.pharotera.com.conf /etc/nginx/conf.d
 copy ./nginx/certs /etc/nginx/certs
