@@ -9,6 +9,11 @@ dotenv.config();
 const app = express();
 const port = 3000;
 
+// 1- install node js in my machine
+// 2- install server depend
+// 3- run server
+// ensure database is running
+
 // Middleware
 app.use(cors({
   origin: "*"
@@ -17,7 +22,7 @@ app.use(cors({
 app.use(express.json());
 
 // MongoDB Connection
-mongoose.connect('mongodb://db:27017/task-manager')
+mongoose.connect('mongodb://online-db:27017/task-manager')
   .then(() => console.log('Connected to MongoDB'))
   .catch(err => console.error('MongoDB connection error:', err));
 
